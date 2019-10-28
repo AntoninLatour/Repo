@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <p id="counter"></p>
+            <table>
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tbody id="countries">
+                </tbody>
+            </table>
+
+            <script>
+                var app = new function() { 
+                    this.el = document.getElementById('countries');
+                    this.countries = ['France', 'Germany', 'England', 'Spain', 'Belgium', 'Italy', 'Portugal', 'Irland', 'Luxembourg'];
+                    this.Count = function(data) {
+                    var el = document.getElementById('counter');
+                    var name = 'country'; if (data) {
+                    if (data > 1) {
+                    name = 'countries';
+                    }
+                    el.innerHTML = data + ' ' + name ;
+                    } else {
+                    el.innerHTML = 'No ' + name;
+                    }
+                    };
+                }
+            </script>
+    </body>
+</html>
